@@ -127,12 +127,12 @@ React configured to use with Webpack, Babel and ESLint
 	```
 11. To start development of project use command:
 	```
-  npm start
-  ```
+	npm start
+	```
 12. To create bundle (in `dist/` folder) that you can put on the server use command:
 	```
-  npm run build
-  ```
+	npm run build
+	```
 
 ## Author
 Copyright (c) 2019 [Piotr Kołodziejczyk](https://github.com/frontend-london)
