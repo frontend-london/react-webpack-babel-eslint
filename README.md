@@ -3,11 +3,17 @@ React configured to use with Webpack, Babel and ESLint
 
 ## Instruction how to create it on your own manually
 1. Create a `package.json` file:
-  `npm init`
-  Or if you want to skip all the questions, add the -y flag:
-  `npm init -y`
+  ```
+  npm init
+  ```
+  Or if you want to skip all the questions, add the `-y` flag:
+  ```
+  npm init -y
+  ```
 2. We need to install all the dependencies:
-  `npm i react react-dom webpack webpack-cli webpack-dev-server @babel/core babel-loader @babel/preset-env @babel/preset-react eslint eslint-loader babel-eslint html-webpack-plugin html-loader -D`
+  ```
+  npm i react react-dom webpack webpack-cli webpack-dev-server @babel/core babel-loader @babel/preset-env @babel/preset-react eslint eslint-loader babel-eslint html-webpack-plugin html-loader -D
+  ```
 
 	Explanation:
 	* `react` - React library
@@ -24,7 +30,7 @@ React configured to use with Webpack, Babel and ESLint
 	* `eslint` - ESLint JavaScript linter
 	* `eslint-loader` - ESLint loader for webpack
 	* `babel-eslint` - wrapper for Babel's parser used for ESLint
-3. Create file `.gitignore`:
+3. Create a file `.gitignore`:
 	```
 	node_modules/
 	dist/
@@ -104,7 +110,7 @@ React configured to use with Webpack, Babel and ESLint
 
 	ReactDOM.render(<App />, document.getElementById('root'));
 	```
-10. Create a file src/index.html to render website:
+10. Create a file `src/index.html` to render website:
 	```
 	<!DOCTYPE html>
 	<html lang="en">
@@ -119,10 +125,14 @@ React configured to use with Webpack, Babel and ESLint
 	</body>
 	</html>
 	```
-11. Start project:
-	`npm start`
-	or deploy code using:
-	`npm run build`
+11. To start development of project use command:
+	```
+  npm start
+  ```
+12. To create bundle (in `dist/` folder) that you can put on the server use command:
+	```
+  npm run build
+  ```
 
 ## Author
 Copyright (c) 2019 [Piotr Kołodziejczyk](https://github.com/frontend-london)
