@@ -15,21 +15,21 @@ React configured to use with Webpack, Babel and ESLint
   npm i react react-dom webpack webpack-cli webpack-dev-server @babel/core babel-loader @babel/preset-env @babel/preset-react eslint eslint-loader babel-eslint html-webpack-plugin html-loader -D
   ```
 
-	Explanation:
-	* `react` - React library
-	* `react-dom` - ReactDOM library to render React
-	* `webpack` - module bundler
-	* `webpack-cli` - to use webpack in the command line
-	* `webpack-dev-server` - development server
-	* `@babel/core` - transforms  ES6 code into ES5
-	* `babel-loader` - Babel loader for webpack
-	* `@babel/preset-env` - for compiling Javascript ES6 code down to ES5
-	* `@babel/preset-react` - for compiling JSX and other stuff down to Javascript
-	* `html-webpack-plugin` -  generates an HTML file with `<script>` injected, writes this to `dist/index.html`, and minifies the file
-	* `html-loader` - for exporting HTML
-	* `eslint` - ESLint JavaScript linter
-	* `eslint-loader` - ESLint loader for webpack
-	* `babel-eslint` - wrapper for Babel's parser used for ESLint
+  Explanation:
+  * `react` - React library
+  * `react-dom` - ReactDOM library to render React
+  * `webpack` - module bundler
+  * `webpack-cli` - to use webpack in the command line
+  * `webpack-dev-server` - development server
+  * `@babel/core` - transforms  ES6 code into ES5
+  * `babel-loader` - Babel loader for webpack
+  * `@babel/preset-env` - for compiling Javascript ES6 code down to ES5
+  * `@babel/preset-react` - for compiling JSX and other stuff down to Javascript
+  * `html-webpack-plugin` -  generates an HTML file with `<script>` injected, writes this to `dist/index.html`, and minifies the file
+  * `html-loader` - for exporting HTML
+  * `eslint` - ESLint JavaScript linter
+  * `eslint-loader` - ESLint loader for webpack
+  * `babel-eslint` - wrapper for Babel's parser used for ESLint
 3. Create a file `.gitignore`:
 	```
 	node_modules/
@@ -45,6 +45,7 @@ React configured to use with Webpack, Babel and ESLint
 5. Create a file `webpack.config.js` with Webpack config:
 	```
 	const HtmlWebPackPlugin = require("html-webpack-plugin");
+	
 	module.exports = {
 	  module: {
 	    rules: [
