@@ -31,109 +31,109 @@ React configured to use with Webpack, Babel and ESLint
   * `eslint-loader` - ESLint loader for webpack
   * `babel-eslint` - wrapper for Babel's parser used for ESLint
 3. Create a file `.gitignore`:
-	```
-	node_modules/
-	dist/
-	```
+  ```
+  node_modules/
+  dist/
+  ```
 4. Add the following scripts to `package.json`:
-	```
-	"scripts": {
-	    "start": "webpack-dev-server --mode development --open",
-	    "build": "webpack --mode production"
-	  },
-	```
+  ```
+  "scripts": {
+      "start": "webpack-dev-server --mode development --open",
+      "build": "webpack --mode production"
+  },
+  ```
 5. Create a file `webpack.config.js` with Webpack config:
-	```
-	const HtmlWebPackPlugin = require("html-webpack-plugin");
-	
-	module.exports = {
-	  module: {
-	    rules: [
-	      {
-	        test: /\.(js|jsx)$/,
-	        exclude: /node_modules/,
-	        use: ['babel-loader', 'eslint-loader']
-	      },
-	      {
-	        test: /\.html$/,
-	        use: [
-	          {
-	            loader: "html-loader"
-	          }
-	        ]
-	      }
-	    ]
-	  },
-	  plugins: [
-	    new HtmlWebPackPlugin({
-	      template: "./src/index.html",
-	      filename: "./index.html"
-	    })
-	  ]
-	};
-	```
+  ```
+  const HtmlWebPackPlugin = require("html-webpack-plugin");
+  
+  module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader', 'eslint-loader']
+        },
+        {
+          test: /\.html$/,
+          use: [
+            {
+              loader: "html-loader"
+            }
+          ]
+        }
+      ]
+    },
+    plugins: [
+      new HtmlWebPackPlugin({
+        template: "./src/index.html",
+        filename: "./index.html"
+      })
+    ]
+  };
+  ```
 6. Create a file `.babelrc` with Babel config:
-	```
-	{
-	  "presets": [
-	    "@babel/preset-env",
-	    "@babel/preset-react"
-	  ]
-	}
-	```
+  ```
+  {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+  ```
 7. Create a file `.eslintrc.js` with ESLint config:
-	```
-	module.exports = {
-	  parser: "babel-eslint",
-	};
-	```
+  ```
+  module.exports = {
+    parser: "babel-eslint",
+  };
+  ```
 8. Create a file `src/App.js` with sample component content:
-	```
-	import React, { Component } from 'react';
+  ```
+  import React, { Component } from 'react';
 
-	class App extends Component {
-	  render() {
-	    return (
-	      <div className="App">
-	        Basic App demo
-	      </div>
-	    );
-	  }
-	}
+  class App extends Component {
+    render() {
+      return (
+        <div className="App">
+          Basic App demo
+        </div>
+      );
+    }
+  }
 
-	export default App;
-	```
+  export default App;
+  ```
 9. Create a file `src/index.js` and place the following code to render a component:
-	```
-	import React from "react";
-	import ReactDOM from "react-dom";
-	import App from './App';
+  ```
+  import React from "react";
+  import ReactDOM from "react-dom";
+  import App from './App';
 
-	ReactDOM.render(<App />, document.getElementById('root'));
-	```
+  ReactDOM.render(<App />, document.getElementById('root'));
+  ```
 10. Create a file `src/index.html` to render website:
-	```
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>React App</title>
-	</head>
-	<body>
-	  <noscript>You need to enable JavaScript to run this app.</noscript>
-	  <div id="root"></div>
-	</body>
-	</html>
-	```
+  ```
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  </html>
+  ```
 11. To start development of project use command:
-	```
-	npm start
-	```
+  ```
+  npm start
+  ```
 12. To create bundle (in `dist/` folder) that you can put on the server use command:
-	```
-	npm run build
-	```
+  ```
+  npm run build
+  ```
 
 ## Author
 Copyright (c) 2019 [Piotr Kołodziejczyk](https://github.com/frontend-london)
